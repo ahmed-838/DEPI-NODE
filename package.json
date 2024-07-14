@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/main_test.test.js", 
+    "test": "mocha tests/main_test.test.js",
     "start": "node app.js"
   },
   "keywords": [],
@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "mysql2": "^3.10.2",
     "nodemon": "^3.1.4"
   },
   "devDependencies": {

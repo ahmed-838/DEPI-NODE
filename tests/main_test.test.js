@@ -1,12 +1,39 @@
-describe('Example Test Suite', function() {
-  it('should assert true', async function() {
-    // Dynamically import chai using import()
-    const chai = await import('chai');
-    const expect = chai.expect;
+import chai from 'chai';
+import chaiHttp from 'chai-http';
+import { expect } from 'chai';
+import app from '../app'; // Adjust the path as necessary
 
-    // Assertion using Chai
-    expect(true).to.be.true;
+chai.use(chaiHttp);
+
+describe('Chat API', () => {
+  it('should insert a new message', (done) => {
+    chai.request(app)
+      .post('/chat')
+      .send({ username: 'test_user', message: 'This is a test message' })
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.text).to.equal('Message sent successfully!');
+        done();
+      });
   });
 
-  // Add more test cases as needed
+  it('should fail if message is missing', (done) => {
+    chai.request(app)
+      .post('/chat')
+      .send({ username: 'test_user', message: '' })
+      .end((err, res) => {
+        expect(res).to.have.status(500);
+        done();
+      });
+  });
+
+  it('should fail if username is missing', (done) => {
+    chai.request(app)
+      .post('/chat')
+      .send({ username: '', message: 'This is a test message' })
+      .end((err, res) => {
+        expect(res).to.have.status(500);
+        done();
+      });
+  });
 });
