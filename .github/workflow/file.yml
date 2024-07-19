@@ -1,0 +1,9 @@
+name: CI file to build and push docker image 
+on:
+  push:
+    branches: [main] 
+
+jobs:
+  build-and-push:
+    run-on:  ubuntu:lts
+x
