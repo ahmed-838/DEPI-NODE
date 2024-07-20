@@ -1,6 +1,4 @@
-version: '3'
 services:
-# database layer for  wordpress >> MYSQL database 
   mysql_database:
     image: mysql
     restart: always 
