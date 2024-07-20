@@ -5,5 +5,5 @@ on:
 
 jobs:
   build-and-push:
-    run-on:  ubuntu:lts
+    run-on:  Node
 x

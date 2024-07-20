@@ -1,114 +1,111 @@
-/* Reset default browser styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Set a background color for the body */
 body {
-    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
 }
 
-/* Style the chat container */
-.chat-container {
+.cat {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ear {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    top: -40px;
+    transform: rotate(45deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ear-left {
+    left: 10px;
+}
+
+.ear-right {
+    right: 10px;
+}
+
+.face {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 50px;
     background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    transition: transform 0.3s ease;
+    border-radius: 50%;
+    top: 50px;
 }
 
-.chat-container:hover {
-    transform: translateY(-5px);
+.eye-left {
+    left: 30px;
 }
 
-/* Style the heading */
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-    font-size: 24px;
+.eye-right {
+    right: 30px;
 }
 
-/* Style the form */
-.chat-form {
-    display: flex;
-    flex-direction: column;
+.pupil {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background-color: #000000;
+    border-radius: 50%;
+    top: 12px;
+    left: 7px;
 }
 
-/* Style input groups */
-.chat-form .input-group {
-    margin-bottom: 20px;
+.nose {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6666;
+    border-radius: 50%;
+    top: 100px;
+    left: 70px;
 }
 
-.chat-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
-    font-size: 14px;
+.mouth {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: transparent;
+    border-bottom: 5px solid #000000;
+    border-radius: 0 0 50px 50px;
+    top: 120px;
+    left: 55px;
 }
 
-/* Style inputs and textarea */
-.chat-form input,
-.chat-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.whiskers {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background-color: #000000;
+    top: 90px;
 }
 
-.chat-form input:focus,
-.chat-form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-    outline: none;
+.whiskers-left {
+    left: -40px;
 }
 
-/* Style the button */
-.chat-form button {
-    padding: 12px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.chat-form button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 91, 179, 0.2);
-}
-
-/* Add responsive design */
-@media (max-width: 500px) {
-    .chat-container {
-        padding: 15px 20px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .chat-form input,
-    .chat-form textarea {
-        font-size: 14px;
-    }
-
-    .chat-form button {
-        font-size: 14px;
-    }
+.whiskers-right {
+    right: -40px;
 }

@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Application</title>
+    <title>Cute Cat</title>
     <link rel="stylesheet" href="css/mainPage.css">
 </head>
 <body>
-    <div class="chat-container">
-        <h2>Chat Application</h2>
-        <form class="chat-form" action="/chat" method="POST">
-            <div class="input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+    <div class="cat">
+        <div class="ear ear-left"></div>
+        <div class="ear ear-right"></div>
+        <div class="face">
+            <div class="eye eye-left">
+                <div class="pupil"></div>
             </div>
-            <div class="input-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="eye eye-right">
+                <div class="pupil"></div>
             </div>
-            <button type="submit">Send</button>
-        </form>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="whiskers whiskers-left"></div>
+            <div class="whiskers whiskers-right"></div>
+        </div>
     </div>
 </body>
 </html>
